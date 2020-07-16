@@ -14,8 +14,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import RandomizedSearchCV
 #Reading data sets
-train = pd.read_csv('mercedes-benz-train.csv')
-test = pd.read_csv('mercedes-benz-test.csv')
+train = pd.read_csv('/opt/dkube/input/mercedes-benz-train.csv')
+test = pd.read_csv('/opt/dkube/input/mercedes-benz-test.csv')
 print("Train shape : {}\nTest shape : {}".format(train.shape, test.shape))
 train_pred = pd.get_dummies(train).drop('ID', axis=1).drop('y', axis=1)
 test_pred = pd.get_dummies(test).drop('ID', axis=1)
